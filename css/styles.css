@@ -8,6 +8,30 @@
   --accent-color: #ff6c00;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -18,6 +42,14 @@ body {
 
 .link {
   text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 2px solid red;
 }
 
 .visually-hidden {
@@ -33,10 +65,27 @@ body {
   margin: -1px;
 }
 
+.pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: Raleway, sans-serif;
+  font-size: 42px;
+  line-height: calc(49 / 42);
+  letter-spacing: 0.05em;
+}
+
 /* ----------------HEADER-------------------------- */
 
 .header {
   background-color: gray;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-link {
@@ -67,6 +116,11 @@ body {
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  background-color: transparent;
+  min-width: 160px;
+  height: 40px;
+  border-radius: 25px;
+  border: 1px solid var(--accent-color);
 
   color: var(--first-btn-color);
 }
@@ -90,12 +144,8 @@ body {
 }
 
 .hero-pre-title {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: var(--base-margin);
 }
 
 .hero-title {
@@ -104,6 +154,7 @@ body {
   line-height: calc(85 / 72);
   letter-spacing: 0.05em;
   color: var(--first-title-color);
+  margin-bottom: var(--base-margin);
 }
 
 .hero-after-title {
@@ -115,21 +166,19 @@ body {
 
 /* ----------------ABOUT-------------------------- */
 
+.about {
+  padding-top: 140px;
+  padding-bottom: 120px;
+}
+
 .about-pre-title {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: #303030;
+  margin-bottom: var(--base-margin);
 }
 
 .about-title {
-  font-family: Raleway, sans-serif;
-  font-size: 42px;
-  line-height: calc(49 / 42);
-  letter-spacing: 0.05em;
   color: var(--second-title-color);
+  margin-bottom: var(--base-margin);
 }
 
 .about-after-title {
@@ -137,6 +186,7 @@ body {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #555555;
+  margin-bottom: var(--base-margin);
 }
 
 .about-text {
@@ -144,6 +194,7 @@ body {
   line-height: 1.86;
   letter-spacing: 0.02em;
   color: #555555;
+  margin-bottom: 40px;
 }
 
 .about-btn {
@@ -160,23 +211,28 @@ body {
 
 .prices {
   background-color: var(--second-btn-color);
+  padding-top: 130px;
+  padding-bottom: 130px;
 }
 
 .prices-pre-title {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: var(--base-margin);
 }
 
 .prices-title {
-  font-family: Raleway, sans-serif;
-  font-size: 42px;
-  line-height: calc(49 / 42);
-  letter-spacing: 0.05em;
   color: var(--first-title-color);
+  margin-bottom: 44px;
+}
+
+.prices-list {
+  border: 1px solid #ffffff;
+  padding: 30px 40px;
+  width: 50%;
+}
+
+.prices-item {
+  margin-bottom: var(--base-margin);
 }
 
 .prices-item-text {
@@ -195,4 +251,184 @@ body {
   text-transform: uppercase;
 
   color: var(--first-btn-color);
+}
+
+/* ----------------REASONS-------------------------- */
+
+.reasons {
+  padding-top: 120px;
+  padding-bottom: 130px;
+}
+
+.reasons-item {
+  width: 170px;
+  height: 133px;
+  border: 1px solid #000000;
+  padding: 20px 24px;
+}
+
+.reasons-item-count {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: calc(57 / 42);
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #303030;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.reasons-item-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-align: center;
+
+  color: #303030;
+}
+
+.reasons-pre-title {
+  color: #303030;
+  margin-bottom: var(--base-margin);
+}
+
+.reasons-title {
+  color: var(--second-title-color);
+  margin-bottom: var(--base-margin);
+}
+
+.reasons-after-title {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #555555;
+}
+
+/* ----------------MASTERS-------------------------- */
+
+.masters {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.masters-pre-title {
+  color: #303030;
+  margin-bottom: var(--base-margin);
+}
+
+.masters-item-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc (25 / 18);
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #303030;
+  margin-bottom: 8px;
+}
+
+.masters-item-text {
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: var(--accent-color);
+}
+
+/* ----------------GALLERY-------------------------- */
+
+.gallery {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.gallery-pre-title {
+  color: #303030;
+  margin-bottom: 44px;
+}
+
+/* ----------------ONLINE-------------------------- */
+.online {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  background-color: var(--second-btn-color);
+}
+
+.online-title {
+  color: var(--first-title-color);
+}
+
+/* ----------------CONTACTS-------------------------- */
+
+.contacts {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  background-color: var(--second-btn-color);
+  padding-left: 100px;
+}
+
+.contacts-title {
+  color: var(--first-btn-color);
+  margin-bottom: 40px;
+}
+
+.contacts-address {
+  margin-bottom: 70px;
+  font-style: normal;
+}
+
+.contacts-item {
+  margin-bottom: var(--base-margin);
+}
+
+.contacts-link {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+.contacts-subtitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: var(--base-margin);
+}
+
+.contacts-time {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+/* ----------------FOOTER-------------------------- */
+
+.footer {
+  padding-top: 57px;
+  padding-bottom: 55px;
+}
+
+.footer-copy {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #9da4bd;
+}
+
+.footer-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+
+  color: #303030;
+}
+
+.footer-link:hover {
+  color: var(--accent-color);
 }
