@@ -30,6 +30,8 @@ button {
 
 img {
   display: block;
+  max-width: 100%;
+  width: 100%;
 }
 
 body {
@@ -80,12 +82,48 @@ body {
   letter-spacing: 0.05em;
 }
 
+.btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background-color: transparent;
+  min-width: 160px;
+  height: 40px;
+  border-radius: 25px;
+  border: 1px solid var(--accent-color);
+}
+
 /* ----------------HEADER-------------------------- */
 
 .header {
   background-color: gray;
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.header-logo {
+  margin-right: 70px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-connect {
+  margin-left: auto;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+}
+
+.header-item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .header-link {
@@ -110,25 +148,27 @@ body {
 }
 
 .header-btn {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  background-color: transparent;
-  min-width: 160px;
-  height: 40px;
-  border-radius: 25px;
-  border: 1px solid var(--accent-color);
-
   color: var(--first-btn-color);
+  margin-left: 40px;
 }
 
 /* ----------------HERO-------------------------- */
 
 .hero {
+}
+
+.hero-right {
   background-color: chocolate;
+  flex-grow: 1;
+  padding: 272px 0 206px 96px;
+}
+
+.hero-container {
+  display: flex;
+}
+
+.hero-list {
+  width: 93px;
 }
 .hero-link {
   font-weight: 600;
@@ -171,6 +211,19 @@ body {
   padding-bottom: 120px;
 }
 
+.about-container {
+  display: flex;
+}
+
+.about-list {
+  display: flex;
+  margin-right: 64px;
+}
+
+.about-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .about-pre-title {
   color: #303030;
   margin-bottom: var(--base-margin);
@@ -198,12 +251,6 @@ body {
 }
 
 .about-btn {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
   color: var(--second-btn-color);
 }
 
@@ -225,6 +272,11 @@ body {
   margin-bottom: 44px;
 }
 
+.prices-wrap {
+  display: flex;
+  margin-bottom: 50px;
+}
+
 .prices-list {
   border: 1px solid #ffffff;
   padding: 30px 40px;
@@ -233,6 +285,12 @@ body {
 
 .prices-item {
   margin-bottom: var(--base-margin);
+  display: flex;
+  justify-content: space-between;
+}
+
+.prices-item:last-child {
+  margin-bottom: 0;
 }
 
 .prices-item-text {
@@ -243,14 +301,9 @@ body {
 }
 
 .prices-btn {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-
   color: var(--first-btn-color);
+  display: block;
+  margin: 0 auto;
 }
 
 /* ----------------REASONS-------------------------- */
@@ -260,11 +313,39 @@ body {
   padding-bottom: 130px;
 }
 
+.reasons .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reasons-left,
+.reasons-right {
+  width: calc((100% - 30px) / 2);
+}
+
+.reasons-right {
+  padding-top: 30px;
+}
 .reasons-item {
   width: 170px;
   height: 133px;
   border: 1px solid #000000;
   padding: 20px 24px;
+}
+
+.reasons-list {
+  width: 370px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.reasons-item:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.reasons-item:nth-child(even) {
+  margin-top: 30px;
 }
 
 .reasons-item-count {
@@ -316,10 +397,37 @@ body {
   margin-bottom: var(--base-margin);
 }
 
+.masters-title {
+  color: var(--second-title-color);
+  margin-bottom: 44px;
+}
+
+.masters-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+
+.masters-item {
+  width: calc(100% / 3 - 30px);
+  /* width: calc((100% - 90px) / 3) */
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+/* .masters-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+.masters-item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+} */
+
 .masters-item-title {
   font-weight: 400;
   font-size: 18px;
-  line-height: calc (25 / 18);
+  line-height: calc(25 / 18);
   text-align: center;
   letter-spacing: 0.02em;
   color: #303030;
@@ -345,6 +453,19 @@ body {
 .gallery-pre-title {
   color: #303030;
   margin-bottom: 44px;
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+
+.gallery-item {
+  width: calc(100% / 5 - 30px);
+  margin-left: 30px;
+  margin-bottom: 30px;
 }
 
 /* ----------------ONLINE-------------------------- */
