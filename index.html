@@ -47,21 +47,26 @@
           <a href="tel:+380441111111" class="header-tel link"
             >+38 044 111 11 11</a
           >
-          <button type="button" class="header-btn btn">онлайн-запись</button>
+          <button type="button" class="header-btn btn" data-modal-open>
+            онлайн-запись
+          </button>
         </div>
       </div>
     </header>
     <main>
       <section class="hero">
         <div class="container hero-container">
-          <ul class="hero-list list">
-            <li class="hero-item">
-              <a href="" class="hero-link link" target="_blank">Instagram</a>
-            </li>
-            <li class="hero-item">
-              <a href="" class="hero-link link" target="_blank">Youtube</a>
-            </li>
-          </ul>
+          <div class="hero-left">
+            <ul class="hero-list list">
+              <li class="hero-item">
+                <a href="" class="hero-link link" target="_blank">Instagram</a>
+              </li>
+              <li class="hero-item">
+                <a href="" class="hero-link link" target="_blank">Youtube</a>
+              </li>
+            </ul>
+          </div>
+
           <div class="hero-right">
             <p lang="en" class="hero-pre-title pre-title">
               A hair salon for men in Kyiv
@@ -199,12 +204,23 @@
           <h2 class="masters-title title">Наши мастера</h2>
           <ul class="masters-list list">
             <li class="masters-item">
-              <img
-                src="./img/masters-img-1.jpeg"
-                alt="барбер стижет клиента"
-                width="370"
-                height="346"
-              />
+              <div class="masters-item-wrap">
+                <img
+                  src="./img/masters-img-1.jpeg"
+                  alt="барбер стижет клиента"
+                  width="370"
+                  height="346"
+                />
+                <p class="masters-top-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Optio vel deserunt repudiandae asperiores dolor, recusandae
+                  numquam quibusdam nam, iste facilis ipsam, fugit harum officia
+                  facere aliquam placeat quas! Optio dolor quidem hic nisi quo
+                  dicta reprehenderit iusto? Necessitatibus commodi itaque
+                  corrupti, totam, facilis aliquam nam sit error ut pariatur
+                  aliquid!
+                </p>
+              </div>
               <div class="masters-item-wrapper">
                 <h3 lang="en" class="masters-item-title">John Smith</h3>
                 <p lang="en" class="masters-item-text">Extreme Barber</p>
@@ -391,5 +407,26 @@
         </ul>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close" data-modal-close>X</button>
+      </div>
+    </div>
   </body>
+  <script>
+    (() => {
+      const refs = {
+        openModalBtn: document.querySelector("[data-modal-open]"),
+        closeModalBtn: document.querySelector("[data-modal-close]"),
+        modal: document.querySelector("[data-modal]"),
+      };
+
+      refs.openModalBtn.addEventListener("click", toggleModal);
+      refs.closeModalBtn.addEventListener("click", toggleModal);
+
+      function toggleModal() {
+        refs.modal.classList.toggle("is-hidden");
+      }
+    })();
+  </script>
 </html>
