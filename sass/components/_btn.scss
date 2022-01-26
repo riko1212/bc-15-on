@@ -1,0 +1,19 @@
+.btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background-color: transparent;
+  min-width: 160px;
+  height: 40px;
+  border-radius: 25px;
+  border: 1px solid var(--accent-color);
+  transition: color 300ms, background-color 300ms;
+  &:hover,
+  &:focus {
+    color: var(--first-btn-color);
+    background-color: var(--accent-color);
+  }
+}

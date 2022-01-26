@@ -1,0 +1,127 @@
+.masters {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  background-color: #f7f7f7;
+}
+
+.masters-pre-title {
+  color: #303030;
+  margin-bottom: var(--base-margin);
+  &::before {
+    background-color: #303030;
+  }
+}
+
+.masters-title {
+  color: var(--second-title-color);
+  margin-bottom: 44px;
+}
+
+.masters-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+
+.masters-item {
+  width: calc(100% / 3 - 30px);
+  /* width: calc((100% - 90px) / 3) */
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.masters-item-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.masters-top-text {
+  position: absolute;
+  top: 0;
+  color: #ffffff;
+  line-height: 1.4;
+  padding: 40px;
+  height: 100%;
+  background-color: rgba(255, 166, 0, 0.489);
+  transform: translate(100%, 100%);
+  transition: transform 300ms;
+  .masters-item:hover & {
+    transform: translate(0);
+  }
+}
+
+/* .masters-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+.masters-item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+} */
+
+.masters-item-wrapper {
+  padding-top: 30px;
+}
+
+.masters-item-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #303030;
+  margin-bottom: 8px;
+}
+
+.masters-item-text {
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: var(--accent-color);
+  margin-bottom: 30px;
+}
+
+.masters-social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.masters-social-item {
+  width: 44px;
+  height: 44px;
+  & + & {
+    margin-left: 10px;
+  }
+}
+
+.masters-social-link {
+  width: 100%;
+  height: 100%;
+  background-color: tomato;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  &:hover,
+  &:focus {
+    background-color: teal;
+    color: tomato;
+  }
+}
+
+.masters-social-icon {
+  fill: currentColor;
+}
+
+/* .masters-social-link:hover,
+.masters-social-link:focus {
+  background-color: teal;
+}
+
+.masters-social-link:hover .masters-social-icon,
+.masters-social-link:focus .masters-social-icon {
+  fill: tomato;
+} */
