@@ -3,7 +3,7 @@
   padding-bottom: 130px;
 }
 
-.gallery-pre-title {
+.gallery__pre-title {
   color: #303030;
   margin-bottom: 44px;
   &::before {
@@ -18,7 +18,7 @@
   margin-bottom: -30px;
 }
 
-.gallery-item {
+.gallery-list__item {
   width: calc(100% / 5 - 30px);
   margin-left: 30px;
   margin-bottom: 30px;

@@ -7,29 +7,27 @@
   padding-bottom: 32px;
 }
 
-.header-logo {
+.header__logo {
   margin-right: 70px;
 }
 
-.header-container {
-  display: flex;
-  align-items: center;
+.header__container {
+  @extend %align-list;
 }
 
-.header-connect {
+.connect {
   margin-left: auto;
 }
 
-.header-list {
-  display: flex;
-  align-items: center;
+.site-list {
+  @extend %align-list;
 }
 
-.header-item:not(:last-child) {
+.site-list__item:not(:last-child) {
   margin-right: 40px;
 }
 
-.header-link {
+.site-list__link {
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -42,7 +40,7 @@
   }
 }
 
-.header-tel {
+.connect__tel {
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -50,7 +48,7 @@
   color: var(--header-text-color);
 }
 
-.header-btn {
+.connect__btn {
   color: var(--first-btn-color);
   margin-left: 40px;
 }

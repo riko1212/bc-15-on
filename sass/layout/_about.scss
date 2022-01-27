@@ -3,7 +3,7 @@
   padding-bottom: 120px;
 }
 
-.about-container {
+.about__container {
   display: flex;
 }
 
@@ -13,11 +13,11 @@
   flex-shrink: 0;
 }
 
-.about-item:not(:last-child) {
+.about-list__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.about-pre-title {
+.about-right__pre-title {
   color: #303030;
   margin-bottom: var(--base-margin);
   &::before {
@@ -25,12 +25,12 @@
   }
 }
 
-.about-title {
+.about-right__title {
   color: var(--second-title-color);
   margin-bottom: var(--base-margin);
 }
 
-.about-after-title {
+.about-right__after-title {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
@@ -38,7 +38,7 @@
   margin-bottom: var(--base-margin);
 }
 
-.about-text {
+.about-right__text {
   font-size: 14px;
   line-height: 1.86;
   letter-spacing: 0.02em;
