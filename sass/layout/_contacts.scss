@@ -21,6 +21,13 @@
   }
 }
 
+.contacts .container {
+  @media screen and (min-width: 1200px) {
+    width: 100%;
+    padding: 0;
+  }
+}
+
 .contacts__title {
   color: var(--first-btn-color);
   margin-bottom: 40px;

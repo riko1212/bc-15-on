@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <a href="" class="logo header__logo"
           ><img src="./img/logo.svg" alt="лого сайта"
@@ -51,10 +51,49 @@
             онлайн-запись
           </button>
         </div>
+        <button type="button" class="menu-open-btn">O</button>
       </div>
-    </header> -->
+      <div class="mob-menu is-hidden">
+        <div class="container">
+          <div class="mob-menu-top">
+            <button type="button" class="mob-menu-close">X</button>
+        <nav>
+          <ul class="mob-menu-list list">
+            <li class="mob-menu-item">
+              <a href="" class="mob-menu-link link">О нас</a>
+            </li>
+            <li class="mob-menu-item">
+              <a href="" class="mob-menu-link link">Услуги и цены</a>
+            </li>
+            <li class="mob-menu-item">
+              <a href="" class="mob-menu-link link">Мастера</a>
+            </li>
+            <li class="mob-menu-item">
+              <a href="" class="mob-menu-link link">Контакты</a>
+            </li>
+          </ul>
+           </nav>
+          </div>
+        <div class="mob-menu-bottom">
+          <div class="mob-contact">
+            <a href="" class="mob-contact-link link">+38 044 111 1 1 11</a>
+            <button type="button" class="mob-contact-btn btn">
+              онлайн-запись
+            </button>
+          </div>
+          <ul class="mob-social-list list">
+            <li class="mob-social-item">
+              <a href="" class="mob-social-link link">Instagram</a>
+            </li>
+            <li class="mob-social-item">
+              <a href="" class="mob-social-link link">Youtube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <main>
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container hero__container">
           <div class="hero-left">
             <ul class="hero-list list">
@@ -69,6 +108,7 @@
                 >
               </li>
             </ul>
+            </div>
           </div>
 
           <div class="hero-right">
@@ -77,13 +117,13 @@
             </p>
             <h1 class="hero-right__title" lang="en">BarberShop</h1>
             <p class="hero-right__after-title">
-              Мы эксперты в модных мужских стрижках. <br />
-              Работаем быстро, осторожно и со вкусом.
+              Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно
+              и со вкусом.
             </p>
           </div>
         </div>
       </section>
-      <section class="about">
+      <!--<section class="about">
         <div class="container about__container">
           <ul class="about-list list">
             <li class="about-list__item">
@@ -333,20 +373,62 @@
           </p>
           <ul class="gallery-list list">
             <li class="gallery-list__item">
-              <img
-                src="./img/gallery-img-1.jpeg"
-                alt="барбер стижет клиента"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/gallery-img-1.jpeg    1x,
+                    ./img/gallery-img-1-2x.jpeg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery-tab-1x.jpeg 1x,
+                    ./img/gallery-tab-2x.jpeg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery-mob-1x.jpeg 1x,
+                    ./img/gallery-mob-2x.jpeg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./img/gallery-img-1.jpeg"
+                  alt="барбер стижет клиента"
+                />
+              </picture>
             </li>
             <li class="gallery-list__item">
-              <img
-                src="./img/gallery-img-2.jpeg"
-                alt="барбер стижет клиента"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/gallery-img-2.jpeg    1x,
+                    ./img/gallery-img-2-2x.jpeg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery1-tab-1x.jpeg 1x,
+                    ./img/gallery2-tab-2x.jpeg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery2-mob-1x.jpeg 1x,
+                    ./img/gallery2-mob-2x.jpeg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./img/gallery-img-2.jpeg"
+                  alt="барбер стижет клиента"
+                />
+              </picture>
             </li>
             <li class="gallery-list__item">
               <img
@@ -537,20 +619,8 @@
       </div>
     </div>
   </body>
-  <script>
-    (() => {
-      const refs = {
-        openModalBtn: document.querySelector("[data-modal-open]"),
-        closeModalBtn: document.querySelector("[data-modal-close]"),
-        modal: document.querySelector("[data-modal]"),
-      };
-
-      refs.openModalBtn.addEventListener("click", toggleModal);
-      refs.closeModalBtn.addEventListener("click", toggleModal);
-
-      function toggleModal() {
-        refs.modal.classList.toggle("is-hidden");
-      }
-    })();
+  <script src="./js/modal.js">
+    
   </script>
+  <script src="./js/menu.js"></script>
 </html>
