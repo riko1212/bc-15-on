@@ -437,8 +437,15 @@ body {
   margin-left: auto;
 }
 
+@media screen and (min-width: 768px) {
+  .menu-open-btn {
+    display: none;
+  }
+}
+
 .mob-menu {
-  position: absolute;
+  position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   background-color: #ffffff;
@@ -446,6 +453,12 @@ body {
   height: 100vh;
   padding-top: 48px;
   padding-bottom: 48px;
+}
+
+@media screen and (min-width: 768px) {
+  .mob-menu {
+    display: none;
+  }
 }
 
 .mob-menu .container {
